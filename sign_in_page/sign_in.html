@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonaPalBot - Sign In</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- Sign-In Modal -->
+    <div id="sign-in-modal" class="sign-in-modal active">
+        <div class="sign-in-container">
+            <div class="logo">
+                <img src="/images/WhatsApp Image 2025-02-01 at 00.36.00_f8b9cf10.jpg" alt="PersonaPalBot Logo">
+            </div>
+            <h1>Sign In to Your Account</h1>
+            <form id="sign-in-form">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+                
+                <button type="submit">Sign In</button>
+            </form>
+            <div class="links">
+                <a href="/forgot-password">Forgot Password?</a>
+                <a href="/sign-up">Don't have an account? Sign Up</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>

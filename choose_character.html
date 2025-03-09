@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Character</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images\WhatsApp Image 2025-02-01 at 00.36.00_f8b9cf10.jpg" alt="PersonaPalBot Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Character Selection Section -->
+    <section id="character-selection">
+        <h2>Choose Your Character</h2>
+        <div class="characters-gallery">
+            <!-- Add this for each character card -->
+            <div class="character-card" id="muscle-mike">
+                <img src="images\WhatsApp Image 2025-01-31 at 19.36.32_f0c6c492.jpg" alt="Muscle Mike" class="character-image">
+                <h3>Muscle Mike</h3>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="character-card" id="melody-mimi">
+                <img src="images\WhatsApp Image 2025-01-31 at 19.37.39_bce03c7b.jpg" alt="Melody Mimi" class="character-image">
+                <h3>Melody Mimi</h3>
+                <button class="select-btn">Select</button>
+            </div>
+            <!-- Add more character cards as needed -->
+            <div class="character-card" id="van-gogh-vinny">
+                <img src="images\WhatsApp Image 2025-01-31 at 19.37.51_1f4db78a.jpg" alt="Van Gogh Vinny" class="character-image">
+                <h3>Van Gogh Vinny</h3>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="character-card" id="sonnet-sammy">
+                <img src="images\WhatsApp Image 2025-01-31 at 19.37.16_4278abad.jpg" alt="Sonnet Sammy" class="character-image">
+                <h3>Sonnet Sammy</h3>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="character-card" id="corporate-charlie">
+                <img src="images\WhatsApp Image 2025-01-31 at 19.36.09_33936b9c.jpg" alt="Corporate Charlie" class="character-image">
+                <h3>Corporate Charlie</h3>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="character-card" id="entrepreneur-ella">
+                <img src="images\WhatsApp Image 2025-01-31 at 19.38.50_c3f201a4.jpg" alt="Entrepreneur Ella" class="character-image">
+                <h3>Entrepreneur Ella</h3>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="character-card" id="chef-chow">
+                <img src="images\WhatsApp Image 2025-01-31 at 19.40.55_42133d10.jpg" alt="Chef Chow" class="character-image">
+                <h3>Chef Chow</h3>
+                <button class="select-btn">Select</button>
+            </div>
+            <div class="character-card" id="lounging-larry">
+                <img src="images\WhatsApp Image 2025-01-31 at 19.46.33_99cfff51.jpg" alt="Lounging Larry" class="character-image">
+                <h3>Lounging Larry</h3>
+                <button class="select-btn">Select</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PersonaPalBot. All Rights Reserved.</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </footer>
+
+    <script>
+        // Function to handle character selection
+        function selectCharacter(character) {
+            // Store the selected character in localStorage
+            localStorage.setItem('selectedCharacter', character);
+            // Redirect to the interaction page
+            window.location.href = 'character_interaction.html';
+        }
+
+        // Add event listeners for the "Select" buttons
+        document.querySelectorAll('.select-btn').forEach((button) => {
+            button.addEventListener('click', (event) => {
+                const selectedCharacter = event.target.closest('.character-card').id; // Get the character's ID (e.g., 'muscle-mike')
+                selectCharacter(selectedCharacter);
+            });
+        });
+    </script>
+</body>
+</html>

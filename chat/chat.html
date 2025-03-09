@@ -1,0 +1,20 @@
+<!-- Chat Section -->
+<section id="chat">
+    <div id="chat-container">
+        <div id="chat-window">
+            <!-- Chat messages will appear here -->
+        </div>
+        <textarea id="user-input" placeholder="Type your message..."></textarea>
+        <button id="send-text" onclick="sendTextInput()">Send</button>
+        <button id="microphone" onclick="startVoiceRecognition()">🎤</button>
+    </div>
+</section>
+
+<!-- Modal for Character Response -->
+<div id="response-modal" style="display:none;">
+    <div id="response-container">
+        <button id="close-modal" onclick="closeModal()">Close</button>
+        <h3 id="response-title"></h3>
+        <p id="response-text"></p>
+    </div>
+</div>
